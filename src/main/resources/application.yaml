@@ -1,3 +1,29 @@
+server:
+  port: 8083
+
 spring:
   application:
     name: banco-electronico-cqrs
+  datasource:
+    url: jdbc:mysql://localhost:3306/banco_electronico
+    username: root
+    password: 123456
+    driver: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+
+axon:
+  axonserver:
+    servers: localhost:8124 # Direccion del servidor Axon Server
+  serializer:
+    general: jackson        # Serializador GENERAL: se usa para la mayoría
+                            # de objetos (comandos, queries, etc.)
+
+# Usar logging unicamente en caso de buscar errores
+#logging:
+#  level:
+#    org.axonframework: DEBUG
+#    com.fasterxml.jackson: DEBUG

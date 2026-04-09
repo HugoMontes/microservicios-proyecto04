@@ -2,7 +2,9 @@ package com.banco.electronico.api.event;
 
 import com.banco.electronico.api.enums.AccountStatus;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class AccountCreatedEvent extends BaseEvent<String> {
 
     @Getter

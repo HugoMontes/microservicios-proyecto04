@@ -1,7 +1,9 @@
 package com.banco.electronico.api.event;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class BaseEvent<T> {
 
     @Getter

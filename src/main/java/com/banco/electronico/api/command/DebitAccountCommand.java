@@ -1,7 +1,9 @@
 package com.banco.electronico.api.command;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 public class DebitAccountCommand extends BaseCommand<String> {
 
     @Getter
